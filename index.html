@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+<body>
+    <div class="container">
+        <h3 style="text-align: center;">Tic-Tac-Toe Game</h3>
+        <form action="post">
+            <label for="player_1">First Player:</label>
+            <input type="text" name="player_1" id="player_1" required> 
+            <br>
+            <label for="player_2">Second Player:</label>
+            <input type="text" name="player_2" id="player_2" required>
+            <br>
+            <input type="submit" value="Start Game">
+        </form>
+    </div>
+</body>
+<script>
+
+    // pushing players name to local storage from form
+    const form = document.querySelector('form')
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const player_1 = document.querySelector("#player_1").value
+        const player_2 = document.querySelector("#player_2").value
+
+        localStorage.setItem("player_1", player_1)
+        localStorage.setItem("player_2", player_2)
+
+        window.location.href = "game.html";  // navigating to game.html page 
+    })
+</script>
+</html>

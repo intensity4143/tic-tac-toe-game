@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+  }
+  .container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 2px solid black;
+    width: 450px;
+    height: auto; /* Adjusts based on width */
+    aspect-ratio: 1 / 1; /* Keeps it square */
+    height: auto;
+    gap: 20px;
+    padding: 15px;
+  }
+  button {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    height: 100%;
+    border: 1px solid #212121;
+    background-color: #414141;
+    color: #fff;
+  }
+  button:disabled {
+    opacity: 1; /* Keep full opacity */
+    /* color: inherit;  */
+  }
+
+  .reset {
+    width: 60%;
+    font-size: 20px;
+    padding: 12px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: rgb(72, 138, 6);
+    border-radius: 10px;
+    border: none;
+  }
+  .reset:hover {
+    background-color: rgb(99, 189, 9);
+    cursor: pointer;
+  }
+  a {
+    width: 100%;
+    text-align: center;
+  }
+  .winnerBox {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 2px solid red; */
+    font-size: 32px;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #525151;
+    color: #fff;
+    width: 100%;
+  }
+  .hidden {
+    display: none;
+  }
+  #playAgain {
+    font-size: 20px;
+    padding: 8px;
+    width: 50%;
+    cursor: pointer;
+    background-color: #2b2a2a;
+  }
+  .reduceOpacity {
+    opacity: 0.4;
+  }
+  .players {
+    border: 1px solid black;
+    font-size: 20px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+  }
+  .score1,
+  .score2 {
+    font-weight: bold;
+  }
+  @media (max-width: 600px) {
+    .buttons-container {
+      width: 350px;
+      gap: 10px;
+      padding: 10px;
+    }
+    button {
+    font-size: 50px;
+  }
+  }
+  @media (max-width: 400px) {
+    .buttons-container {
+      width: 320px;
+      overflow: hidden;
+      gap: px;
+      padding: 10px;
+    }
+  }

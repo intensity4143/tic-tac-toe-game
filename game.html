@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="gameStyle.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tic-Tac-Toe Game</h1>
+      <div class="players">
+        <div class="player1">
+          <span class="play1"></span> <span class="score1"></span>
+        </div>
+        <div class="player2">
+          <span class="play2"></span> <span class="score2"></span>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <button class="button" id="00"></button>
+        <button class="button" id="01"></button>
+        <button class="button" id="02"></button>
+        <button class="button" id="10"></button>
+        <button class="button" id="11"></button>
+        <button class="button" id="12"></button>
+        <button class="button" id="20"></button>
+        <button class="button" id="21"></button>
+        <button class="button" id="22"></button>
+      </div>
+      <div class="winnerBox hidden">
+        <span id="winner"></span
+        ><button id="playAgain" onclick="resetGame()">Play Again</button>
+      </div>
+      <button class="reset">Reset</button>
+      <a href="index.html">
+        <button class="reset">Change Players Name</button>
+      </a>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
